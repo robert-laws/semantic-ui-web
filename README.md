@@ -1,2 +1,4 @@
 # semantic-ui-web
-Semantic UI for websites
+### Project: Semantic UI for websites
+
+Developmental Website with Semantic-UI
