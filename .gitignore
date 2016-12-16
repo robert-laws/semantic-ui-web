@@ -194,6 +194,7 @@ node_modules/
 semantic/
 su/
 img/
+.DS_Store
 
 
 orleans.codegen.cs
