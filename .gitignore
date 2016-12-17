@@ -195,6 +195,7 @@ semantic/
 su/
 # img/
 .DS_Store
+semantic.json
 
 
 orleans.codegen.cs
