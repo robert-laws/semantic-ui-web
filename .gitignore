@@ -193,7 +193,7 @@ ClientBin/
 node_modules/
 semantic/
 su/
-img/
+# img/
 .DS_Store
 
 
