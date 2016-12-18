@@ -25,7 +25,7 @@
         <h2>elements</h2>
         <div class="ui equal width form">
             <div class="fields">
-                <div class="inline field">
+                <div class="five wide inline required field">
                     <label>Name:</label>
                     <input />
                 </div>
@@ -34,10 +34,124 @@
                     <input />
                 </div>
             </div>
-
+        </div>
+        <div class="ui divider"></div>
+        <div class="ui form margin top">
+            <div class="inline fields">
+                <div class="eight wide field">
+                    <label>Name</label>
+                    <input type="text" placeholder="First Name">
+                </div>
+                <div class="three wide field">
+                    <input type="text" placeholder="Middle Name">
+                </div>
+                <div class="five wide field">
+                    <input type="text" placeholder="Last Name">
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        <div class="ui form margin top">
+            <div class="four fields">
+                <div class="field">
+                    <label>Item 1</label>
+                    <input type="text">
+                </div>
+                <div class="field">
+                    <label>Item 2</label>
+                    <input type="text">
+                </div>
+                <div class="field">
+                    <label>Item 3</label>
+                    <input type="text">
+                </div>
+                <div class="field">
+                    <label>Item 4</label>
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        <div class="ui equal width form margin top">
+            <div class="fields">
+                <div class="field">
+                    <label>Name:</label>
+                    <input />
+                </div>
+                <div class="field">
+                    <label>Age:</label>
+                    <input />
+                </div>
+            </div>
+        </div>
+        <div class="ui divider"></div>
+        <div class="ui form margin top">
+            <div class="field">
+                <label>First Name</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label>Last Name</label>
+                <input type="text">
+            </div>
+            <div class="field">
+                <label for="">Information</label>
+                <textarea rows="6"></textarea>
+            </div>
+            <div class="field">
+                <div class="ui checkbox">
+                    <label>Attending the Event</label>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="grouped fields">
+                <label for="color">Color choices
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="color">
+                            <label>Red</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="color">
+                            <label>Green</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="ui radio checkbox">
+                            <input type="radio" name="color">
+                            <label>Yellow</label>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="six wide field">
+                <label for="">Books</label>
+                <select name="" id="" class="ui dropdown">
+                    <option>Number #1</option>
+                    <option>Number #2</option>
+                    <option>Number #3</option>
+                </select>
+            </div>
+            <div class="six wide field">
+                <label>Colors Used</label>
+                <select multiple="" class="ui dropdown">
+                    <option>Item #1</option>
+                    <option>Item #2</option>
+                    <option>Item #3</option>
+                    <option>Item #4</option>
+                    <option>Item #5</option>
+                    <option>Item #6</option>
+                </select>
+            </div>
         </div>
     </div>
 
+    <script>
+        $('.ui.checkbox').checkbox();
+        $('.ui.dropdown').dropdown();
+    </script>
 </body>
 
 </html>
