@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>robdlaws.com</title>
+    <link rel="stylesheet" href="su/semantic.min.css">
+    <style>
+        div#topDiv {
+            margin-top: 70px;
+        }
+        
+        div.margin.top {
+            margin-top: 35px;
+        }
+        
+        div.margin.bottom {
+            margin-bottom: 35px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="su/semantic.min.js"></script>
+</head>
+
+<body>
+    <div id="topDiv" class="ui container">
+        <h1>Module</h1>
+        <h2>Shape</h2>
+        <div class="ui shape starter">
+            <div class="sides">
+                <div class="active side"><img src="img/pizza.jpg" class="ui small image"></div>
+                <div class="side"><img src="img/pumpkin_1.jpg" class="ui small image"></div>
+                <div class="side"><img src="img/soup.jpg" class="ui small image"></div>
+                <div class="side"><img src="img/text_editor.jpg" class="ui small image"></div>
+            </div>
+        </div>
+        <div class="ui hidden divider"></div>
+        <button class="ui primary button">Change Side</button>
+        <div class="ui divider margin top bottom"></div>
+
+        <div class="ui cube shape">
+            <div class="sides">
+                <div class="active side">
+                    <p>Item #1</p>
+                </div>
+                <div class="side">
+                    <p>Item #2</p>
+                </div>
+                <div class="side">
+                    <p>Item #3</p>
+                </div>
+                <div class="side">
+                    <p>Item #4</p>
+                </div>
+            </div>
+        </div>
+        <div class="ui hidden divider"></div>
+        <button class="ui secondary button">Change Side</button>
+    </div>
+    <script>
+        $('.shape').shape({
+            duration: 500
+        });
+
+        $('.primary.button').on('click', function () {
+            $('.shape.starter').shape('flip up');
+        });
+
+        $('.secondary.button').on('click', function () {
+            $('.cube').shape('flip right');
+        });
+    </script>
+</body>
+
+</html>

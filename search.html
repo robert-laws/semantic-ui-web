@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>robdlaws.com</title>
+    <link rel="stylesheet" href="su/semantic.min.css">
+    <style>
+        div#topDiv {
+            margin-top: 70px;
+        }
+        
+        div.margin.top {
+            margin-top: 35px;
+        }
+        
+        div.margin.bottom {
+            margin-bottom: 35px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="su/semantic.min.js"></script>
+</head>
+
+<body>
+    <div id="topDiv" class="ui container">
+        <h1>Modules</h1>
+        <h2>Search</h2>
+        <div class="ui search">
+            <input type="text" class="prompt" placeholder="Languages">
+            <div class="results"></div>
+        </div>
+    </div>
+    <script>
+        var content = [
+            {
+                title: 'Arabic'
+            },
+            {
+                title: 'Arameic'
+            },
+            {
+                title: 'French'
+            },
+            {
+                title: 'German'
+            },
+            {
+                title: 'English'
+            },
+            {
+                title: 'Japanese'
+            },
+            {
+                title: 'Korean'
+            },
+            {
+                title: 'Chinese'
+            },
+            {
+                title: 'Spanish'
+            },
+            {
+                title: 'Swahili'
+            }
+        ]
+
+        $('.ui.search').search({
+            source: content
+        });
+    </script>
+</body>
+
+</html>

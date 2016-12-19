@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>robdlaws.com</title>
+    <link rel="stylesheet" href="su/semantic.min.css">
+    <style>
+        div#topDiv {
+            margin-top: 70px;
+        }
+        
+        div.margin.top {
+            margin-top: 35px;
+        }
+        
+        div.margin.bottom {
+            margin-bottom: 35px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="su/semantic.min.js"></script>
+</head>
+
+<body>
+    <div id="topDiv" class="ui container">
+        <h1>Modules</h1>
+        <h2>Tabs</h2>
+        <div class="ui top attached tabular menu">
+            <div class="active item" data-tab="pizza">Pizza</div>
+            <div class="item" data-tab="soup">Soup</div>
+            <div class="item" data-tab="pumpkins">Pumpkins</div>
+            <div class="item" data-tab="editor">Text Editor</div>
+        </div>
+        <div class="ui bottom attached active tab segment" data-tab="pizza"><img class="ui huge image" src="img/pizza.jpg">
+            <h2>Pizza</h2>
+        </div>
+        <div class="ui bottom attached tab segment" data-tab="soup"><img class="ui huge image" src="img/soup.jpg">
+            <h2>Soup</h2></div>
+        <div class="ui bottom attached tab segment" data-tab="pumpkins"><img class="ui huge image" src="img/pumpkin_1.jpg">
+            <h2>Pumpkins</h2></div>
+        <div class="ui bottom attached tab segment" data-tab="editor"><img class="ui huge image" src="img/text_editor.jpg">
+            <h2>Text Editor</h2></div>
+    </div>
+    <script>
+        $('.tabular.menu .item').tab();
+    </script>
+</body>
+
+</html>

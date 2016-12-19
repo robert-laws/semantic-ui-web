@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>robdlaws.com</title>
+    <link rel="stylesheet" href="su/semantic.min.css">
+    <style>
+        div#topDiv {
+            margin-top: 70px;
+        }
+        
+        div.margin.top {
+            margin-top: 35px;
+        }
+        
+        div.margin.bottom {
+            margin-bottom: 35px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="su/semantic.min.js"></script>
+</head>
+
+<body>
+    <div id="topDiv" class="ui container">
+        <h1>Module</h1>
+        <h2>Progress</h2>
+        <div class="ui blue progress" id="standard">
+            <div class="bar">
+                <div class="progress"></div>
+            </div>
+            <div class="label">Information</div>
+        </div>
+        <div class="ui divider margin top bottom"></div>
+        <div class="ui indicating progress" data-percent='80'>
+            <div class="bar ">
+                <div class="progress "></div>
+            </div>
+            <div class="label">Uploading Image</div>
+        </div>
+    </div>
+    <script>
+        $('#standard').progress({
+            percent: 62
+        });
+
+        $('.indicating').progress();
+    </script>
+</body>
+
+</html>

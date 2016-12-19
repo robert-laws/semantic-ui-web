@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>robdlaws.com</title>
+    <link rel="stylesheet" href="su/semantic.min.css">
+    <style>
+        div#topDiv {
+            margin-top: 70px;
+        }
+        
+        div.margin.top {
+            margin-top: 35px;
+        }
+        
+        div.margin.bottom {
+            margin-bottom: 35px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="su/semantic.min.js"></script>
+</head>
+
+<body>
+    <div id="topDiv" class="ui container">
+        <h1>Modules</h1>
+        <h2>Sidebars</h2>
+
+        <div class="ui sidebar vertical inverted icon menu">
+            <div class="item"><i class="large home icon"></i>
+
+            </div>
+            <div class="item"><i class="large file icon"></i> File</div>
+            <div class="item"><i class="large cloud icon"></i> Cloud</div>
+            <div class="item"><i class="large car icon"></i> Car</div>
+        </div>
+
+        <div class="pusher">
+            <button class="ui primary button">Show Sidebar</button>
+        </div>
+
+        <h3>Stars</h3>
+        <div class="ui star rating" data-rating="8"></div>
+
+        <h3>Hearts</h3>
+        <div class="ui heart rating" data-rating="3"></div>
+    </div>
+
+
+    <script>
+        $('.rating').rating({
+            maxRating: 10,
+            interactive: false
+        });
+
+        $('.button.primary').on('click', function () {
+            $('.sidebar').sidebar('toggle');
+        });
+    </script>
+</body>
+
+</html>
