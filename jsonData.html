@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>robdlaws.com</title>
+    <link rel="stylesheet" href="su/semantic.min.css">
+    <style>
+        div#topDiv {
+            margin-top: 70px;
+        }
+
+        div.margin.top {
+            margin-top: 35px;
+        }
+
+        div.margin.bottom {
+            margin-bottom: 35px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="su/semantic.min.js"></script>
+</head>
+
+<body>
+    <div id="topDiv" class="ui container">
+        <h1>Semantic API</h1>
+        <h2>Using</h2>
+        <div class="ui hidden divider"></div>
+        <div id="list" class="ui very relaxed list">
+
+        </div>
+
+        <script>
+            var color = getUrlVars()['color'];
+
+            $(document).ready(function () {
+                $.getJSON('data/sample.json', function (info) {
+                    info.forEach(function (r) {
+                        if (r.color == color) {
+                            $('#list').append('<div class="item"><i class="large user middle aligned ' + color + ' icon"></i><div class="content"><div class="header">id: ' + r.id + '</div><div class="description">name: ' + r.username + '</div></div></div>');
+                        }
+                    });
+                });
+            });
+
+
+
+            // Read a page's GET URL variables and return them as an associative array.
+            function getUrlVars() {
+                var vars = [],
+                    hash;
+                var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+                for (var i = 0; i < hashes.length; i++) {
+                    hash = hashes[i].split('=');
+                    vars.push(hash[0]);
+                    vars[hash[0]] = hash[1];
+                }
+                return vars;
+            }
+        </script>
+    </div>
+
+</body>
+
+</html>

@@ -17,6 +17,10 @@
         div.margin.bottom {
             margin-bottom: 35px;
         }
+
+        .ui.hidden.card {
+            display: none;
+        }
     </style>
 
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
@@ -25,15 +29,118 @@
 
 <body>
     <div id="topDiv" class="ui container">
-        <h1>Home Page</h1>
-        <h2></h2>
+        <h1>Semantic API</h1>
+        <h2>Using</h2>
+        <button class="ui primary button">Get Posts</button>
+        <ul></ul>
+        <button class="ui secondary button">See Bob's Details</button>
+        <div class="ui hidden divider"></div>
+        <div class="ui input">
+            <input type="text" placeholder="username">
+        </div>
+        <div class="ui divider margin top bottom"></div>
 
+
+        <div class="ui follow button" data-id="10">
+            Follow Sally
+        </div>
+        <div class="ui follow button" data-id="4">
+            Follow Jenny
+        </div>
+
+        <div class="ui divider margin top bottom"></div>
+        <div class="ui tertiary button">Get Images</div>
+
+        <div class="ui divider margin top bottom"></div>
+        <div class="ui hidden card">
+            <div class="content">
+                <a href="#" class="header"></a>
+                <div class="meta"></div>
+                <div class="contact">
+                    <i class="phone icon"></i>
+                </div>
+            </div>
+        </div>
+
+        <div id="imgDisplay" class="ui hidden doubling stackable grid">
+
+        </div>
+
+        <script>
+            $.fn.api.settings.api = {
+                'get posts': 'http://jsonplaceholder.typicode.com/posts',
+                'get users': 'http://jsonplaceholder.typicode.com/users',
+                'get user': 'http://jsonplaceholder.typicode.com/users/{id}',
+                'get images': 'http://jsonplaceholder.typicode.com/photos?albumId={id}',
+                'find user': 'http://jsonplaceholder.typicode.com/users/{id}',
+                'search user': 'http://jsonplaceholder.typicode.com/users?username={value}'
+            }
+
+            //            $('.primary.button').api({
+            //                action: 'get posts',
+            //                onSuccess: function (response) {
+            //                    response.forEach(function (r) {
+            //                        $('ul').append('<li>id: ' + r.id + ' title: ' + r.title + '</li>');
+            //                    });
+            //                }
+            //            });
+
+            $('.primary.button').api({
+                action: 'get users',
+                onSuccess: function (response) {
+                    response.forEach(function (r) {
+                        $('ul').append('<li>id: ' + r.id + ' city: ' + r.address.city + '</li>');
+                    });
+                }
+            });
+
+            $('.tertiary.button').api({
+                action: 'get images',
+                urlData: {
+                    id: 1
+                },
+                onSuccess: function (response) {
+                    response.forEach(function (r) {
+                        $('#imgDisplay').append('<div class="four wide column"><img class="ui medium bordered image" src="' + r.url + '" /></div>');
+                    });
+                }
+            });
+
+            $('.secondary.button').api({
+                action: 'get user',
+                urlData: {
+                    id: 2
+                },
+                onSuccess: function (response) {
+                    $('.card .header').text(response.name);
+                    $('.card .meta').text(response.email);
+                    $('.card .contact').append(response.phone);
+                    $('.hidden.card').removeClass('hidden');
+                }
+            });
+
+            //            $('input').api({
+            //                action: 'search user',
+            //                onSuccess: function (response) {
+            //                    $('.card .header').text(response[0].name);
+            //                    $('.card .meta').text(response[0].email);
+            //                    $('.card .contact').append(response[0].phone);
+            //                    $('.hidden.card').removeClass('hidden');
+            //                }
+            //            });
+
+            $('.follow.button').api({
+                action: 'find user',
+                onSuccess: function (response) {
+                    $('.card .header').text(response.name);
+                    $('.card .meta').text(response.email);
+                    $('.card .contact').append(response.phone);
+                    $('.hidden.card').removeClass('hidden');
+                }
+            });
+        </script>
     </div>
 
 </body>
 
 </html>
-
-
-
-
