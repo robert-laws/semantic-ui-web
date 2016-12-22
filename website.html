@@ -29,7 +29,7 @@
 
         .masthead.segment {
             min-height: 700px;
-            padding: 0em 0em;
+            /* padding: 0em 0em; --remove comment if menu is not fixed */
         }
 
         .masthead .ui.menu .ui.button {
@@ -100,6 +100,7 @@
 
         @media only screen and (max-width: 700px) {
             #homeIdentity {
+                padding-top: 16em;
                 background-color: rgba(0, 0, 0, 0.65);
             }
         }
@@ -108,8 +109,9 @@
     <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
     <script src="su/semantic.min.js"></script>
     <script>
-        $(document)
-            .ready(function () {});
+        $(document).ready(function () {
+
+        });
     </script>
 </head>
 
@@ -118,50 +120,55 @@
     <!-- Page Contents -->
     <div class="pusher">
         <div class="ui inverted vertical masthead center aligned segment">
-            <div class="ui stackable inverted menu">
+            <div class="ui fixed stackable inverted menu">
                 <div class="ui container">
                     <a href="#" class="header item">
-                        <img class="logo" src="img/logo3.png"> robdlaws.com
+                        <img class="logo" src="img/logo7.png"> robdlaws.com
                     </a>
-                    <div class="ui simple dropdown item">
-                        About Me
-                        <i class="dropdown icon"></i>
-                        <div class="menu">
-                            <a class="item" href="#">Link Item</a>
-                            <a class="item" href="#">Link Item</a>
-                            <div class="divider"></div>
-                            <div class="header">Header Item</div>
-                            <a class="item" href="#">Link Item</a>
-                        </div>
-                    </div>
                     <div class="ui simple dropdown item">
                         Portfolio
                         <i class="dropdown icon"></i>
                         <div class="menu">
-                            <a class="item" href="#">Link Item</a>
-                            <a class="item" href="#">Link Item</a>
+                            <div class="header">Web Development</div>
+                            <a class="item" href="#"><i class="code icon"></i> Front-End Development</a>
+                            <a class="item" href="#"><i class="database icon"></i> Back-End Development</a>
                             <div class="divider"></div>
-                            <div class="header">Header Item</div>
-                            <a class="item" href="#">Link Item</a>
+                            <div class="header">Design</div>
+                            <a class="item" href="#"><i class="paint brush icon"></i> Adobe Design</a>
                         </div>
                     </div>
                     <div class="ui simple dropdown item">
                         Web Tech
                         <i class="dropdown icon"></i>
                         <div class="menu">
-                            <a class="item" href="#">Link Item</a>
-                            <a class="item" href="#">Link Item</a>
-                            <div class="divider"></div>
-                            <div class="header">Header Item</div>
-                            <a class="item" href="#">Link Item</a>
+                            <a class="item" href="#"><i class="cube icon"></i> Podcasts</a>
+                            <a class="item" href="#"><i class="television icon"></i> Websites</a>
+                            <a class="item" href="#"><i class="user icon"></i> Learning</a>
                         </div>
                     </div>
-                    <a href="#" class="item">Photography</a>
+                    <div class="ui simple dropdown item">
+                        Photography
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a class="item" href="#"><i class="plane icon"></i> Travel Photos</a>
+                            <a class="item" href="#"><i class="photo icon"></i> Fun Photos</a>
+                        </div>
+                    </div>
+                    <div class="ui simple dropdown item">About Me
+                        <i class="dropdown icon"></i>
+                        <div class="menu">
+                            <a class="item" href="#"><i class="file text outline icon"></i> Resume</a>
+                            <a class="item" href="#"><i class="computer icon"></i> Social Networking </a>
+                            <div class="divider"></div>
+                            <div class="header">Relaxation</div>
+                            <a class="item" href="#"><i class="paw icon"></i> Four-footed Friends </a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="homeIdentity" class="ui text container">
                 <h1 class="ui inverted header">Robert Laws</h1>
-                <h2>Covering the Personal & Professional</h2>
+                <h2><em>Covering the Personal & Professional</em></h2>
             </div>
         </div>
 
@@ -169,18 +176,21 @@
             <div class="ui middle aligned stackable grid container">
                 <div class="row">
                     <div class="eight wide column">
-                        <h3 class="ui header">We Help Companies and Companions</h3>
-                        <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
-                        <h3 class="ui header">We Make Bananas That Can Dance</h3>
-                        <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
+                        <h3 class="ui header">Information Science and Web Development</h3>
+                        <p>With years of experience in libraries working with IT and Web Design, I have the technical skills of a developer and the experience of working and engaging with a wide variety of technical and non-technical people.</p>
+                        <div class="ui hidden divider"></div>
+                        <div class="ui icon olive huge message">
+                            <i class="world icon"></i>
+                            <div class="content">
+                                <div class="header">
+                                    Global Experience
+                                </div>
+                                <div>-- Living and working overseas for 8+ years has prepared me for out of the ordinary challenges.</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="six wide right floated column">
-                        <img src="img/pumpkin_1.jpg" class="ui large bordered rounded image">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="center aligned column">
-                        <a class="ui huge button">Check Them Out</a>
+                        <img src="img/rdl_home.jpg" class="ui large bordered rounded image">
                     </div>
                 </div>
             </div>
